@@ -7,6 +7,7 @@ import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
+import "../styles/global.css";
 
 
 
@@ -15,7 +16,7 @@ import backgroundVideo1 from "../assets/portfoliobg.mp4";
 import backgroundVideo2 from "../assets/portfoliobg2.mp4";
 import backgroundVideo3 from "../assets/portfoliobg3.mp4";
 
-import videoUrl from  "../assets/demovideo.mp4";
+import videoUrl from "../assets/demovideo.mp4";
 
 
 
@@ -31,7 +32,7 @@ export default function Portfolio() {
   const backgroundVideos = [backgroundVideo1, backgroundVideo2, backgroundVideo3];
   const backgroundVideo = backgroundVideos[Math.floor(Math.random() * backgroundVideos.length)];
   const sectionRef = useRef(null);
-  
+
 
 
   useEffect(() => {
@@ -53,7 +54,7 @@ export default function Portfolio() {
     );
   }, []);
 
- 
+
 
 
   return (
@@ -74,8 +75,7 @@ export default function Portfolio() {
 
       {/* Content Wrapper */}
       <div className="relative z-20 flex flex-col items-center w-full text-white">
-        {/* Hero Section */}
-        <section className="w-full h-screen flex flex-col items-center justify-center text-center p-10">
+        <section className="w-full h-screen flex flex-col items-center justify-center text-center p-10 relative">
           <motion.h1
             className="text-6xl font-extrabold"
             initial={{ opacity: 0, y: -50 }}
@@ -86,60 +86,94 @@ export default function Portfolio() {
           </motion.h1>
 
           <motion.p
-            className="text-lg mt-6 text-white max-w-3xl leading-relaxed"
+            className="text-lg mt-6 text-white w-1/2 leading-relaxed italic"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 2 }}
           >
-            Creating seamless digital experiences through cutting-edge technologies.
-            Focused on delivering efficient, scalable, and innovative solutions that
-            enhance performance and user engagement.
+            Creating seamless digital experiences through cutting-edge technologies. With a passion for building robust,
+            scalable, and high-performance applications, I specialize in delivering innovative solutions tailored to
+            meet unique business needs.
           </motion.p>
 
-          {/* Scroll Down Button */}
-         
-
-        </section>
 
 
-
-
-        <section  className="w-full mx-auto my-16 p-10 text-white text-center">
-          {/* About Me Header */}
-          <h2 className="text-6xl font-bold">About Me</h2>
-
-          <p className="mt-6 text-lg leading-relaxed">
-            The journey into software development began with <strong>curiosity</strong> and a drive to create.
-            From exploring the <em>fundamentals of programming</em> to tackling <strong>real-world challenges</strong>,
-            every step has been a lesson in <u>perseverance</u> and <u>innovation</u>.
-          </p>
-
-          <p className="mt-4 text-lg leading-relaxed">
-            Working with <strong>startups</strong> and collaborating on <em>impactful projects</em> has reinforced the belief that
-            <u>technology is a powerful tool for change</u>. The focus remains on building
-            <strong>scalable, high-performance applications</strong> that not only <em>solve problems</em>
-            but also enhance <u>user experiences</u>.
-          </p>
-
-          <div className="mt-8">
-            {/* Quote Section */}
-            <div className="quote-container bg-white bg-opacity-10 p-6 rounded-lg text-lg text-white">
-              <p className="quote-text">
-                "When something is important enough, you do it even if the odds are not in your favor." – Elon Musk
-              </p>
-            </div>
-          </div>
-
-
-
-          {/* Know More Button */}
-          <div className="mt-10">
-            <button className="mt-8 text-lg text-white bg-transparent border-2 border-white py-3 px-6 rounded-lg flex items-center mx-auto hover:bg-white hover:text-gray-900 transition duration-300">
-              Know Me <FaArrowRight className="ml-2" />
+          <div className="mt-8 flex gap-6">
+            <button
+              type="button"
+              className="mt-8 text-lg text-white bg-transparent border-2 border-white py-3 px-6 rounded-lg hover:bg-white hover:text-gray-900 transition duration-300"
+            >
+              Get Brochure
             </button>
-
+            <button
+              type="button"
+              className="mt-8 text-lg text-white bg-transparent border-2 border-white py-3 px-6 rounded-lg hover:bg-white hover:text-gray-900 transition duration-300"
+            >
+              Download Resume
+            </button>
           </div>
         </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section className="w-full mx-auto my-16 p-10 text-white text-center">
+  {/* About Me Header */}
+  <h2 className="text-6xl font-bold">About Me</h2>
+  <motion.p
+    className="text-lg mt-4 text-white leading-relaxed italic"
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 2 }}
+  >
+    I am a passionate software developer committed to crafting innovative solutions that elevate user experiences
+    and drive business success. With a focus on continuous learning and growth, I strive to stay ahead of the
+    curve in an ever-evolving tech landscape.
+  </motion.p>
+
+  <div className="mt-8 flex justify-center gap-8">
+    <p className="w-1/2 p-6 border border-white rounded-lg text-lg leading-relaxed">
+      The journey into software development began with <strong>curiosity</strong> and a drive to create.
+      From exploring the <em>fundamentals of programming</em> to tackling <strong>real-world challenges</strong>,
+      every step has been a lesson in <u>perseverance</u> and <u>innovation</u>.
+    </p>
+
+    <p className="w-1/2 mt-4 sm:mt-0 p-6 border border-white rounded-lg text-lg leading-relaxed">
+      Working with <strong>startups</strong> and collaborating on <em>impactful projects</em> has reinforced the belief that
+      <u>technology is a powerful tool for change</u>. The focus remains on building
+      <strong>scalable, high-performance applications</strong> that not only <em>solve problems</em>
+      but also enhance <u>user experiences</u>.
+    </p>
+  </div>
+
+
+  <div className="mt-8">
+    {/* Quote Section */}
+    <div className="quote-container bg-white bg-opacity-10 p-6 rounded-lg text-lg text-white">
+      <p className="quote-text">
+        "When something is important enough, you do it even if the odds are not in your favor." – Elon Musk
+      </p>
+    </div>
+  </div>
+
+  {/* Know More Button */}
+  <div className="mt-10">
+    <button className="mt-8 text-lg text-white bg-transparent border-2 border-white py-3 px-6 rounded-lg flex items-center mx-auto hover:bg-white hover:text-gray-900 transition duration-300">
+      Know Me <FaArrowRight className="ml-2" />
+    </button>
+  </div>
+</section>
+
 
 
 
@@ -150,6 +184,15 @@ export default function Portfolio() {
           className="w-full my-16 p-10 text-center bg-transparent "
         >
           <h2 className="text-6xl font-bold text-white mb-8">Tech Ecosystem</h2>
+          <motion.p
+  className="text-lg mt-6 text-white leading-relaxed"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 2 }}
+>
+  The tech ecosystem is a vibrant, ever-evolving landscape, where innovation thrives and collaboration fuels growth. From cutting-edge software solutions to advanced hardware technologies, it is a space where ideas transform into impactful products that shape the future of industries. As a software developer, I leverage this dynamic environment to create solutions that are not only scalable but also drive real-world transformation.
+</motion.p>
+
 
           {/* Languages Carousel (Left to Right) */}
           <div className="mb-12">
@@ -220,7 +263,7 @@ export default function Portfolio() {
               modules={[Autoplay]}
               className="mt-4"
             >
-              {["AWS", "Docker", "Kubernetes", "CI/CD", "Terraform", "GitHub Actions"].map((devops, index) => (
+              {["AWS", "Docker", "Kubernetes", "CI/CD", "Terraform", "GitHub"].map((devops, index) => (
                 <SwiperSlide key={index} className="p-6 bg-white bg-opacity-20 rounded-lg font-semibold text-white shadow-md">
                   {devops}
                 </SwiperSlide>
@@ -317,44 +360,44 @@ export default function Portfolio() {
 
         {/* Projects */}
         <section className="w-full mx-auto my-16 p-4 text-white text-center bg-transparent">
-      <h2 className="text-6xl font-bold mb-8">Projects</h2>
+          <h2 className="text-6xl font-bold mb-8">Projects</h2>
 
-      <div className="flex flex-col gap-12">
-        {[
-          {
-            title: "E-Commerce Platform",
-            description: "A fully functional e-commerce platform with features like product catalog, cart, checkout, and payment integration.",
-          },
-          {
-            title: "AI Chatbot",
-            description: "An AI-based chatbot for customer service, built with natural language processing and machine learning.",
-          },
-          {
-            title: "Portfolio Website",
-            description: "A personal portfolio website showcasing my skills, projects, and professional achievements.",
-          }
-        ].map((project, index) => (
-          <div key={index} className={`flex flex-col md:flex-row items-center gap-2 bg-white bg-opacity-20 p-2 rounded-lg shadow-lg ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-            {/* Left Section (Video) */}
-            <div className="w-full md:w-1/2">
-              <video
-                className="w-full rounded-lg shadow-md"
-                autoplay
-                loop
-                muted
-                src={videoUrl}  // Using the same video for all projects
-              />
-            </div>
+          <div className="flex flex-col gap-12">
+            {[
+              {
+                title: "E-Commerce Platform",
+                description: "A fully functional e-commerce platform with features like product catalog, cart, checkout, and payment integration.",
+              },
+              {
+                title: "AI Chatbot",
+                description: "An AI-based chatbot for customer service, built with natural language processing and machine learning.",
+              },
+              {
+                title: "Portfolio Website",
+                description: "A personal portfolio website showcasing my skills, projects, and professional achievements.",
+              }
+            ].map((project, index) => (
+              <div key={index} className={`flex flex-col md:flex-row items-center gap-2 bg-white bg-opacity-20 p-2 rounded-lg shadow-lg ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+                {/* Left Section (Video) */}
+                <div className="w-full md:w-1/2">
+                  <video
+                    className="w-full rounded-lg shadow-md"
+                    autoplay
+                    loop
+                    muted
+                    src={videoUrl}  // Using the same video for all projects
+                  />
+                </div>
 
-            {/* Right Section (Description) */}
-            <div className="w-full md:w-1/2">
-              <h3 className="text-3xl font-semibold text-white mb-4">{project.title}</h3>
-              <p className="text-lg text-white">{project.description}</p>
-            </div>
+                {/* Right Section (Description) */}
+                <div className="w-full md:w-1/2">
+                  <h3 className="text-3xl font-semibold text-white mb-4">{project.title}</h3>
+                  <p className="text-lg text-white">{project.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-    </section>
+        </section>
 
         {/* Services */}
         <section className="w-full mx-auto my-16 p-10 text-white text-center bg-transparent">

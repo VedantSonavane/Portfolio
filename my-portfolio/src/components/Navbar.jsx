@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaGithub, FaLinkedin, FaTwitter, FaTimes } from 'react-icons/fa';
 import { FaThLarge } from 'react-icons/fa';
+import myLogo from "/workspaces/Portfolio/my-portfolio/src/assets/mylogo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,9 +12,15 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Left - Brand Name */}
-          <div className="text-white text-xl font-bold">
-            <Link to="/" className="hover:text-gray-300">Vedant Sonavane</Link>
-          </div>
+          <div className="flex items-center space-x-3">
+      <img src={myLogo} alt="Logo" className="h-10 w-10" />
+      <div className="text-white text-xl font-bold">
+        <Link to="/" className="hover:text-gray-300">VEDANT SONAVANE</Link>
+        <p className="text-xs text-white font-light tracking-wide text-center">
+          Design Develop Deploy
+        </p>
+      </div>
+    </div>
 
           {/* Mobile Menu Button - Grid Icon Instead of Hamburger */}
           <div className="md:hidden">
