@@ -17,7 +17,6 @@ import backgroundVideo3 from "../assets/portfoliobg3.mp4";
 import projectImage1 from '../assets/digitalearn.webp';  // Importing images
 import projectImage2 from '../assets/ollato.png';
 import projectImage3 from '../assets/urbane.png';
-import videoUrl from "../assets/demovideo.mp4";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -103,6 +102,8 @@ export default function Portfolio() {
               Download Resume
             </button>
           </div>
+        
+
         </section>
 
         {/* About Me Section */}
@@ -288,7 +289,7 @@ export default function Portfolio() {
             Equipped with a diverse skill set and practical experience, I specialize in crafting efficient, scalable, and innovative solutions. From front-end development to back-end architecture, my expertise spans multiple technologies, ensuring seamless digital experiences and high-performance applications.
           </motion.p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
             {/* Education */}
             <div className="p-6 border border-white rounded-2xl text-lg leading-relaxed bg-transparent hover:scale-105 hover:shadow-xl transition-all duration-500 ease-in-out" data-aos="fade-up">
               <h3 className="text-2xl font-semibold mb-4">Education</h3>
@@ -347,7 +348,7 @@ export default function Portfolio() {
             Each project is a reflection of innovation, problem-solving, and technical expertise. From concept to execution, I focus on building scalable, efficient, and user-friendly solutions that drive meaningful impact. Explore these projects to see creativity and functionality come together.
           </motion.p>
 
-          <div className="flex flex-col gap-12">
+          <div className="flex flex-col gap-6 mt-4">
             {[
               {
                 title: "DigitalLearn",
@@ -403,7 +404,7 @@ export default function Portfolio() {
             We offer a range of professional services designed to help your business grow and thrive. From custom web development to comprehensive e-commerce solutions, our team is here to bring your ideas to life. Explore our services and see how we can assist you.
           </motion.p>
 
-          <div className="space-y-12">
+          <div className="space-y-12 mt-4">
             {/* Service 1 */}
             <div className="flex flex-col lg:flex-row justify-between items-center bg-transparent p-0 rounded-lg" data-aos="fade-up">
               <div className="lg:w-1/2">
@@ -467,8 +468,8 @@ export default function Portfolio() {
 
           {/* Contact Form */}
           <div className="flex flex-col lg:flex-row justify-evenly items-center space-y-6 lg:space-y-0 lg:space-x-12">
-            <div className="lg:w-1/2 bg-opacity-20 p-6 rounded-lg" data-aos="fade-up">
-              <form action="#" method="POST">
+          <div className="lg:w-1/2 bg-opacity-20 p-6 rounded-lg border border-white " data-aos="fade-up">
+          <form action="#" method="POST">
                 <div className="space-y-4">
                   {/* Name and Phone Fields */}
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
