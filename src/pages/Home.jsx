@@ -51,7 +51,7 @@ export default function Portfolio() {
   }, []);
 
   return (
-    <div className="relative w-full min-h-screen text-gray-900">
+    <div className="relative w-full min-h-screen ">
       {/* Video Background */}
       <video
         autoPlay
@@ -102,7 +102,7 @@ export default function Portfolio() {
               Download Resume
             </button>
           </div>
-        
+
 
         </section>
 
@@ -353,19 +353,19 @@ export default function Portfolio() {
               {
                 title: "DigitalLearn",
                 description: "A professional e-learning and e-commerce platform offering courses on coding, AWS, and cloud storage. Designed and developed in just 20 days using WordPress, the platform features video tutorials, quizzes, and assessments within a structured 1-month learning program.",
-                url: "https://digitalearnsolution.com/",
+                url: "https://digitalearnsolution.com/ ",
                 imageUrl: projectImage1
               },
               {
                 title: "OLLATO Eduversity",
                 description: "A platform supporting students' mental health and stress management through expert guidance and personalized programs. Developed with HTML, CSS, PHP, featuring multi-panel access, video calling, payment API integration, and AWS deployment.",
-                url: "https://www.ollato.com/",
+                url: "https://www.ollato.com/ ",
                 imageUrl: projectImage2
               },
               {
                 title: "Urbane Travels",
                 description: "A state-of-the-art travel platform integrating various transportation APIs for smooth and efficient booking. With B2B, B2C, and admin panels, the website is developed using React, Node.js, and Tailwind CSS, hosted on Hosting Raja for optimal performance.",
-                url: "https://www.urbanetravels.com",
+                url: "https://www.urbanetravels.com ",
                 imageUrl: projectImage3
               }
             ].map((project, index) => (
@@ -468,8 +468,8 @@ export default function Portfolio() {
 
           {/* Contact Form */}
           <div className="flex flex-col lg:flex-row justify-evenly items-center space-y-6 lg:space-y-0 lg:space-x-12">
-          <div className="lg:w-1/2 bg-opacity-20 p-6 rounded-lg border border-white " data-aos="fade-up">
-          <form action="#" method="POST">
+            <div className="lg:w-1/2 bg-opacity-20 p-6 rounded-lg border border-white " data-aos="fade-up">
+              <form action="#" method="POST">
                 <div className="space-y-4">
                   {/* Name and Phone Fields */}
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -558,10 +558,10 @@ export default function Portfolio() {
             <div className="lg:w-1/2 flex flex-col items-center space-y-6" data-aos="fade-up">
               <h3 className="text-3xl font-semibold">Follow Me</h3>
               <div className="flex justify-center space-x-6 mt-6">
-                <a href="https://github.com/yourusername" className="hover:text-gray-400">
+                <a href="https://github.com/yourusername " className="hover:text-gray-400">
                   <FaGithub size={40} />
                 </a>
-                <a href="https://linkedin.com/in/yourusername" className="hover:text-gray-400">
+                <a href="https://linkedin.com/in/yourusername " className="hover:text-gray-400">
                   <FaLinkedin size={40} />
                 </a>
                 <a href="mailto:vedantsonavane799@gmail.com" className="hover:text-gray-400">

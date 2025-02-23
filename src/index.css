@@ -1,7 +1,14 @@
-*
-{
-font-family: 'DM Sans';
-}
+@font-face {
+    font-family: 'CustomFont';
+    src: url('/src/assets/urbanist.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  * {
+    font-family: 'CustomFont', 'DM Sans', sans-serif;
+  }
+  
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
